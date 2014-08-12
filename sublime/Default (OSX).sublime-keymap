@@ -1,0 +1,73 @@
+[
+	// ファイルをfinderで開く 
+	{ "keys": ["super+shift+e"], "command": "open_dir", "args": {"dir": "$file_path", "file": "$file_name"} },
+	 // F3で関数の宣言元にジャンプ
+	{ "keys": ["f3"], "command": "goto_definition" },
+	// alt+左で戻る
+	{ "keys": ["alt+left"], "command": "jump_back" },
+	// alt+右で戻ったのをまた進める
+	{ "keys": ["alt+right"], "command": "jump_forward" },
+    // インデント整形
+    { "keys": ["super+ctrl+]"], "command": "reindent", "args": { "single_line": false }},
+    {
+      "keys": ["ctrl+shift+k"],
+      "command": "next_view",
+      "context":
+      [
+        { "key": "setting.is_widget", "operand": false },
+        //{ "key": "setting.command_mode" }
+      ]
+    },
+  {
+    "keys": ["ctrl+shift+j"],
+    "command": "prev_view",
+    "context":
+    [
+        { "key": "setting.is_widget", "operand": false },
+        //{ "key": "setting.command_mode" }
+    ]
+  },
+  {
+    "keys": ["s", "p"], "command": "simple_clone",
+    "args":
+    {
+        "location": "right",
+    },
+    "context":
+    [
+        { "key": "simpleclone_keymap_enabled.right" },
+        { "key": "setting.command_mode" },
+    ]
+  },
+  {
+    "keys": ["v", "s"], "command": "simple_clone",
+    "args":
+    {
+        "location": "down",
+    },
+    "context":
+    [
+        { "key": "simpleclone_keymap_enabled.down" },
+        { "key": "setting.command_mode" },
+    ]
+  },
+   {
+        "keys": ["shift+i"],
+        "command": "find_under_expand",
+        "context":
+        [
+            { "key": "simpleclone_keymap_enabled.down" },
+            { "key": "setting.command_mode" },
+        ]
+    },
+     {
+        "keys": [","],
+        "command": "toggle_comment",
+        "args": { "block": false },
+        "context":
+        [
+            { "key": "simpleclone_keymap_enabled.down" },
+            { "key": "setting.command_mode" },
+        ]
+    },
+]
