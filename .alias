@@ -1,0 +1,5 @@
+alias tmn=tmn
+
+tmn() {
+  tmux new-session -s %1 \; splitw -h
+}
