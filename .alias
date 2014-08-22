@@ -1,4 +1,6 @@
 alias tmn=tmn
+alias bi="bundle install"
+alias r="rails"
 
 tmn() {
   tmux new-session -s %1 \; splitw -h
