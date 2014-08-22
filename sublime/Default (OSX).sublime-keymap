@@ -4,20 +4,16 @@
 	 // F3で関数の宣言元にジャンプ
 	{ "keys": ["f3"], "command": "goto_definition" },
 	// alt+左で戻る
-	{ "keys": ["alt+left"], "command": "jump_back" },
+	//{ "keys": ["alt+left"], "command": "jump_back" },
 	// alt+右で戻ったのをまた進める
-	{ "keys": ["alt+right"], "command": "jump_forward" },
-    // インデント整形
-    { "keys": ["super+ctrl+]"], "command": "reindent", "args": { "single_line": false }},
-    {
-      "keys": ["ctrl+shift+k"],
-      "command": "next_view",
-      "context":
-      [
-        { "key": "setting.is_widget", "operand": false },
-        //{ "key": "setting.command_mode" }
-      ]
-    },
+	//{ "keys": ["alt+right"], "command": "jump_forward" },
+  // インデント整形
+  { "keys": ["super+ctrl+]"], "command": "reindent", "args": { "single_line": false }},
+  // 行の削除
+  { "keys": ["ctrl+k"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
+  // 次のタブへ
+  { "keys": ["ctrl+shift+k"], "command": "next_view", "context": [{ "key": "setting.is_widget", "operand": false }, /*{ "key": "setting.command_mode" }*/ ] },
+  // 前のタブへ
   {
     "keys": ["ctrl+shift+j"],
     "command": "prev_view",
@@ -27,6 +23,11 @@
         //{ "key": "setting.command_mode" }
     ]
   },
+  { "keys": ["ctrl+u"], "command": "scroll_lines", "args": {"amount": 40.0} /*, "context": [{ "key": "setting.command_mode" }] */},
+  { "keys": ["ctrl+d"], "command": "scroll_lines", "args": {"amount": -40.0} /*, "context": [{"key": "setting.command_mode"}] */},
+
+
+  /*
   {
     "keys": ["s", "p"], "command": "simple_clone",
     "args":
@@ -70,4 +71,5 @@
             { "key": "setting.command_mode" },
         ]
     },
+    */
 ]
