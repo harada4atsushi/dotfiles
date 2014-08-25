@@ -1,0 +1,2 @@
+3.0
+{'neobundle.vim': {'checked_time': 1408968867, 'installed_uri': 'https://github.com/Shougo/neobundle.vim.git', 'installed_path': '/Users/haradaatsushi/.vim/bundle/neobundle.vim', 'revisions': {}, 'updated_time': 1408968867}, 'vim-slim': {'checked_time': 1408968869, 'installed_uri': 'https://github.com/slim-template/vim-slim.git', 'installed_path': '/Users/haradaatsushi/.vim/bundle/vim-slim', 'revisions': {'1404220813': '0daaa8581f9a9968cebbc7d14ae9acf1625c0389'}, 'updated_time': '1404220813'}}
