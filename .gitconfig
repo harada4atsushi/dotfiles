@@ -1,0 +1,26 @@
+[user]
+	name = a.harada
+	email = redhornet96@gmail.com 
+[core]
+	excludesfile = /Users/haradaatsushi/.gitignore
+	quotepath = false
+	precomposeunicode = true
+	precomposenicode = true
+[merge]
+    keepBackup = false;
+	tool = sublime
+[mergetool "p4merge"]
+    cmd = p4merge "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
+    keepTemporaries = false
+    trustExitCode = false
+    keepBackup = false
+[diff]
+  external = p4diff
+[mergetool "sublime"]
+	cmd = subl -w $MERGED
+	trustExitCode = false
+[credential]
+	helper = osxkeychain
+[alias]
+	graph = log --graph --decorate --oneline
+  st = status
