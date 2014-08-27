@@ -6,5 +6,5 @@ alias sssh=sssh
 sssh() { ssh -t "$1" 'tmux attach || tmux new || screen -DR'; }
 
 tmn() {
-  tmux new-session -s %1 \; splitw -h
+  tmux new-session -s $1 \; splitw -h
 }
