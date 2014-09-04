@@ -2,6 +2,7 @@ alias tmn=tmn
 alias bi="bundle install"
 alias r="rails"
 alias sssh=sssh
+alias g=git
 
 sssh() { ssh -t "$1" 'tmux attach || tmux new || screen -DR'; }
 
