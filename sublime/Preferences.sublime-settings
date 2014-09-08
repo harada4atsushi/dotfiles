@@ -1,9 +1,15 @@
 {
+	"color_scheme": "Packages/User/Monokai (SL).tmTheme",
 	"ignored_packages":
 	[
 		"Vintage",
 		"Better CoffeeScript",
 		"Ruby Slim"
 	],
-	"open_files_in_new_window": false
+
+	// Finderから開く際にウィンドウではなくタブで開く
+	"open_files_in_new_window": false,
+
+	//空白の削除
+    "trim_trailing_white_space_on_save": true,
 }

@@ -32,6 +32,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
  
 NeoBundle 'slim-template/vim-slim'
+NeoBundle 'Shougo/unite.vim'
  
 call neobundle#end()
  
