@@ -1,12 +1,12 @@
 [
-	// ファイルをfinderで開く 
+	// ファイルをfinderで開く
 	{ "keys": ["super+shift+e"], "command": "open_dir", "args": {"dir": "$file_path", "file": "$file_name"} },
-	 // F3で関数の宣言元にジャンプ
+	// F3で関数の宣言元にジャンプ
 	{ "keys": ["f3"], "command": "goto_definition" },
-	// alt+左で戻る
-	//{ "keys": ["alt+left"], "command": "jump_back" },
-	// alt+右で戻ったのをまた進める
-	//{ "keys": ["alt+right"], "command": "jump_forward" },
+	// カーソルを元の位置に戻す
+	{ "keys": ["ctrl+o"], "command": "jump_back" },
+	// カーソルを元の位置に進める
+	{ "keys": ["ctrl+i"], "command": "jump_forward" },
   // インデント整形
   { "keys": ["super+ctrl+]"], "command": "reindent", "args": { "single_line": false }},
   // 行の削除
