@@ -1,0 +1,58 @@
+#!/bin/sh
+
+#
+# peco
+#
+if [ -n "`which peco 2> /dev/null`" ]; then
+ 
+    # unshift the 1st argument string into output
+    function peco-unshift() {
+        echo "$1"
+        while read x; do
+            echo $x
+        done
+    }
+ 
+    # pd (peco-change-directory)
+    # Usage:
+    #     - Select ${CD_LINE} to change directory
+    #     - Select ${CANCEL_LINE} to cancel
+    function pd() {
+        local DIR_TMP=""
+        local DIR_PATH="$1"
+        local CD_LINE="Change-Directory"
+        local CANCEL_LINE="Cancel"
+        while true
+        do
+            DIR_TMP=$(\ls -1aF ${DIR_PATH} | sed -e "s/@$/\//" | grep / | peco-unshift ${CANCEL_LINE} | peco-unshift ${CD_LINE} | peco)
+            if [ "${DIR_TMP}" = "${CD_LINE}" ]; then
+                cd $DIR_PATH
+                return
+            elif [ "${DIR_TMP}" = "${CANCEL_LINE}" ]; then
+                return
+            else
+                DIR_PATH="${DIR_PATH}${DIR_TMP}"
+            fi
+        done
+    }
+ 
+    # process kill
+    function peco-kill() {
+        for pid in `ps aux | peco | awk '{print $2}'`
+        do
+            kill $pid
+            echo "Killed ${pid}"
+        done
+    }
+ 
+    # select command from history
+    function peco-select-history() {
+        local tac="tail -r"
+        if [ -n "`which tac 2> /dev/null`" ]; then
+            tac="tac"
+        elif [ -n "`which gtac 2> /dev/null`" ]; then
+            tac="gtac"
+        fi
+        $(history | ${tac} | peco | awk '{for(i=8;i<NF;i++)printf("%s ",$i);print $NF}')
+    }
+fi
