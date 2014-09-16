@@ -31,19 +31,20 @@ install node || true
 install graphviz || true
 install mod_security || true
 install mysql || true 
+install redis || true 
 
-cask install iterm2 || true
-cask install growl-fork || true
-cask install growlnotify || true
-cask install sublime-text3 || true
-cask install todoist || true
-cask install the-unarchiver || true
-cask install alfred || true
-cask install dash || true
-cask install hyperswitch || true
-cask install chromecast || true
-cask install cyberduck || true
-cask install atext || true
+cask install iterm2
+cask install growl-fork
+cask install growlnotify
+cask install sublime-text3
+cask install todoist
+cask install the-unarchiver
+cask install alfred
+cask install dash
+cask install hyperswitch
+cask install chromecast
+cask install cyberduck
+cask install atext
 
 #brew 'imagemagick'
 
