@@ -44,7 +44,6 @@ cask install dash
 cask install hyperswitch
 cask install chromecast
 cask install cyberduck
-cask install atext
 
 #brew 'imagemagick'
 
