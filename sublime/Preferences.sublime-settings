@@ -2,8 +2,8 @@
 	"color_scheme": "Packages/User/Monokai (SL).tmTheme",
 	"ignored_packages":
 	[
-		"Vintage",
-		"Ruby Slim"
+		"Ruby Slim",
+		"Vintage"
 	],
 	"open_files_in_new_window": false,
 	"trim_trailing_white_space_on_save": true

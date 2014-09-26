@@ -44,6 +44,8 @@ cask install dash
 cask install hyperswitch
 cask install chromecast
 cask install cyberduck
+cask install divvy 
+cask install teamviz 
 
 #brew 'imagemagick'
 
