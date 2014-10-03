@@ -30,8 +30,8 @@ install bash-completion || true
 install node || true
 install graphviz || true
 install mod_security || true
-install mysql || true 
-install redis || true 
+install mysql 
+install redis 
 install qt 
 
 cask install iterm2
@@ -47,7 +47,6 @@ cask install chromecast
 cask install cyberduck
 cask install divvy 
 cask install teamviz 
-cask install cheatsheet 
 
 #brew 'imagemagick'
 
