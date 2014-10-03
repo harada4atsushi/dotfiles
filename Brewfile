@@ -32,6 +32,7 @@ install graphviz || true
 install mod_security || true
 install mysql || true 
 install redis || true 
+install qt 
 
 cask install iterm2
 cask install growl-fork
@@ -46,9 +47,10 @@ cask install chromecast
 cask install cyberduck
 cask install divvy 
 cask install teamviz 
+cask install cheatsheet 
 
 #brew 'imagemagick'
 
 # mebocan
-#brew 'php54 --with-apxs2 --enable-mbstring --with-pdo-mysql --with-mysql --with-zlib --enable-zip  --with-gd' 
-#brew 'php54-apc'
+#install 'php54 --with-apxs2 --enable-mbstring --with-pdo-mysql --with-mysql --with-zlib --enable-zip  --with-gd' 
+install php54-apc
