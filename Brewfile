@@ -30,9 +30,9 @@ install bash-completion || true
 install node || true
 install graphviz || true
 install mod_security || true
-install mysql 
-install redis 
-install qt 
+install mysql || true
+install redis || true
+install qt || true
 
 cask install iterm2
 cask install growl-fork
@@ -47,6 +47,7 @@ cask install chromecast
 cask install cyberduck
 cask install divvy 
 cask install teamviz 
+cask install android-studio 
 
 #brew 'imagemagick'
 

@@ -19,6 +19,9 @@ set pastetoggle=<C-E>
 " ,rb入力でruby整形
 map ,rb <Esc>:%! ~/rbeautify.rb - <CR>
 
+" F2でNERDTreeを開く
+map <F2> :NERDTreeToggle<CR>
+
 "---------------------------
 " Start Neobundle Settings.
 "---------------------------
@@ -33,6 +36,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
  
 NeoBundle 'slim-template/vim-slim'
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'scrooloose/nerdtree'
  
 call neobundle#end()
  
