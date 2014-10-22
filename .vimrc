@@ -37,6 +37,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'slim-template/vim-slim'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'ctrlpvim/ctrlp.vim'
  
 call neobundle#end()
  
