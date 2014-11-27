@@ -1,3 +1,5 @@
+ctrlp.vim
 neobundle.vim
+nerdtree
 unite.vim
 vim-slim
