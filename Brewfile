@@ -1,9 +1,9 @@
-#tap phinze/homebrew-cask 
 tap homebrew/dupes
 tap josegonzalez/homebrew-php
 tap caskroom/homebrew-versions
 tap peco/peco
 tap homebrew/apache
+tap homebrew/binary
 
 install brew-cask || true
 install ctags || true
@@ -33,6 +33,8 @@ install mod_security || true
 install mysql || true
 install redis || true
 install qt || true
+install docker || true
+install boot2docker || true 
 
 cask install iterm2
 cask install growl-fork
@@ -40,13 +42,13 @@ cask install growlnotify
 cask install sublime-text3
 cask install todoist
 cask install the-unarchiver
-cask install alfred
 cask install dash
 cask install hyperswitch
 cask install chromecast
 cask install cyberduck
 cask install teamviz 
 cask install android-studio 
+cask install alfred 
 
 #brew 'imagemagick'
 
