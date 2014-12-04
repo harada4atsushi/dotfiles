@@ -1,6 +1,12 @@
 [user]
 	name = a.harada
 	email = redhornet96@gmail.com 
+[color]
+  status = auto
+  diff = auto
+  branch = auto
+  interactive = auto
+  grep = auto
 [core]
 	excludesfile = ~/.gitignore
 	quotepath = false
@@ -19,3 +25,4 @@
 	graph = log --graph --decorate --oneline
   st = status
 	c = commit -v
+	co = checkout
