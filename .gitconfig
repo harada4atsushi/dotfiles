@@ -26,3 +26,7 @@
   st = status
 	c = commit -v
 	co = checkout
+[diff]
+    external = git_diff_wrapper
+[pager]
+    diff =
