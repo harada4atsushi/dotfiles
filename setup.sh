@@ -6,6 +6,7 @@ DOT_FILES=(
 .tmux.conf
 .gitconfig
 .pryrc
+.gemrc
 )
 
 for file in ${DOT_FILES[@]}
