@@ -5,6 +5,7 @@ DOT_FILES=(
 .vim
 .tmux.conf
 .gitconfig
+.gitignore
 .pryrc
 .gemrc
 )
