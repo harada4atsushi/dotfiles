@@ -39,8 +39,9 @@ brew install apple-gcc42
 brew install tree 
 brew install awscli 
 brew install postgresql 
-brew install libxml2 
-brew install libxslt 
+brew install libxml2 # for nokogiri
+brew install libxslt # for nokogiri
+brew install libiconv # for nokogiri
 brew install peco 
 brew install tmux 
 brew install reattach-to-user-namespace 
@@ -54,6 +55,7 @@ brew install qt
 brew install docker 
 brew install boot2docker  
 brew install imagemagick
+brew install redis 
 
 #brew install caskroom/cask/brew-cask
 #brew cask install iterm2

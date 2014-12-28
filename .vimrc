@@ -20,7 +20,14 @@ set pastetoggle=<C-E>
 map ,rb <Esc>:%! ~/rbeautify.rb - <CR>
 
 " F2でNERDTreeを開く
-map <F2> :NERDTreeToggle<CR>
+map <F2> :NERDTreeToggle<CR> 
+
+" create new tab
+nnoremap gN :<C-u>tabnew<CR>
+
+" move tab 
+nnoremap gn gt
+nnoremap gp gT
 
 "---------------------------
 " Start Neobundle Settings.

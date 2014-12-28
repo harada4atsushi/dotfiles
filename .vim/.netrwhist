@@ -1,8 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_cnt =7
 let g:netrw_dirhist_1='/Users/haradaatsushi/source/mencolle_server/.git'
 let g:netrw_dirhist_2='/Users/haradaatsushi/source/kptodo/.git'
 let g:netrw_dirhist_3='/Users/haradaatsushi/.vim'
 let g:netrw_dirhist_4='/Users/haradaatsushi/source/dotfiles/.vim/bundle'
 let g:netrw_dirhist_5='/Users/haradaatsushi/source/milogue/.git'
 let g:netrw_dirhist_6='/Users/haradaatsushi/bin'
+let g:netrw_dirhist_7='/Users/haradaatsushi/.vim'
