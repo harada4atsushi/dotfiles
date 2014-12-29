@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<root>
+  <list>
+    <item>
+        <name>ime off spotlight</name>
+        <identifier>private.ime_of_spotlight</identifier>
+        <autogen>
+          --KeyToKey--
+          KeyCode::SPACE, ModifierFlag::CONTROL_L,
+          KeyCode::SPACE, ModifierFlag::CONTROL_L, KeyCode::JIS_EISUU
+        </autogen>
+    </item>
+    <item>
+      <name>terminal</name>
+      <identifier>private.app_terminal</identifier>
+      <only>TERMINAL</only>
+      <!-- タブの切替 -->
+      <autogen>
+        --KeyToKey--
+        KeyCode::CURSOR_RIGHT, ModifierFlag::COMMAND_L | ModifierFlag::OPTION_L,
+        KeyCode::CURSOR_RIGHT, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L
+      </autogen>
+      <autogen>
+        --KeyToKey--
+        KeyCode::CURSOR_LEFT, ModifierFlag::COMMAND_L | ModifierFlag::OPTION_L,
+        KeyCode::CURSOR_LEFT, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L
+      </autogen>
+    </item>
+    <item>
+      <name>Excel F2</name>
+      <identifier>private.app_excel_f2</identifier>
+      <only>EXCEL</only>
+      <!-- セルの編集 F2 -->
+      <autogen>--KeyToKey-- KeyCode::F2, KeyCode::U, ModifierFlag::CONTROL_L</autogen>
+    </item>
+    
+    <item>
+        <name>move tab</name>
+        <only>GOOGLE_CHROME</only>
+        <identifier>private.move_tab</identifier>
+        <autogen>
+            --KeyToKey--
+            KeyCode::J, ModifierFlag::CONTROL_L | ModifierFlag::SHIFT_L,
+            KeyCode::CURSOR_LEFT, ModifierFlag::COMMAND_L | ModifierFlag::OPTION_L
+        </autogen>
+        <autogen>
+            --KeyToKey--
+            KeyCode::K, ModifierFlag::CONTROL_L | ModifierFlag::SHIFT_L,
+            KeyCode::CURSOR_RIGHT, ModifierFlag::COMMAND_L | ModifierFlag::OPTION_L
+        </autogen>
+    </item>
+    <item>
+        <name>finder cursol up/down</name>
+        <only>FINDER</only>
+        <identifier>private.finder_up_down</identifier>
+        <autogen>
+            --KeyToKey--
+            KeyCode::P, ModifierFlag::CONTROL_L,
+            KeyCode::CURSOR_UP
+        </autogen>
+        <autogen>
+            --KeyToKey--
+            KeyCode::N, ModifierFlag::CONTROL_L,
+            KeyCode::CURSOR_DOWN
+        </autogen>
+    </item>
+  </list>
+</root>
