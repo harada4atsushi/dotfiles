@@ -2,3 +2,4 @@
 *.swp
 .env
 .vim/bundle
+!.vim/bundle/neobundle.vim
