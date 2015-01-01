@@ -1,5 +1,5 @@
 .DS_Store
 *.swp
 .env
-.vim/bundle
+.vim/bundle/*
 !.vim/bundle/neobundle.vim
