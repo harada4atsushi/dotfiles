@@ -73,6 +73,12 @@ nnoremap gp gT
 " unite new file
 noremap :uff :<C-u>UniteWithBufferDir file file/new -buffer-name=file<CR>
 
+" vimdiffの色設定
+hi DiffAdd    ctermfg=black ctermbg=2
+hi DiffChange ctermfg=black ctermbg=3
+hi DiffDelete ctermfg=black ctermbg=6
+hi DiffText   ctermfg=black ctermbg=7
+
 let g:ctrlp_show_hidden = 1
 
 syntax on
