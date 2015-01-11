@@ -1,0 +1,6 @@
+<snippet>
+<content><![CDATA[
+<%= ${TM_CURRENT_LINE} %>
+]]></content>
+<tabTrigger>yss=</tabTrigger>
+</snippet>
