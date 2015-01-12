@@ -20,6 +20,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'slim-template/vim-slim'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
+NeoBundle 'Shougo/vimproc.vim'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'tpope/vim-rails'
@@ -80,6 +81,12 @@ hi DiffDelete ctermfg=black ctermbg=6
 hi DiffText   ctermfg=black ctermbg=7
 
 let g:ctrlp_show_hidden = 1
+let g:ctrlp_prompt_mappings = {
+  \ 'PrtHistory(-1)':       ['<nop>'],
+  \ 'PrtHistory(1)':        ['<nop>'],
+  \ 'PrtSelectMove("j")':   ['<c-n>'],
+  \ 'PrtSelectMove("k")':   ['<c-p>']
+  \ }
 
 syntax on
 filetype plugin indent on
