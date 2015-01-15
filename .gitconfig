@@ -25,6 +25,7 @@
 	graph = log --graph --decorate --oneline
   st = status
 	c = commit -v
+	puu = push -u
 	co = checkout
 [diff]
     external = ~/dotfiles/bin/git_diff_wrapper
