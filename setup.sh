@@ -10,6 +10,10 @@ DOT_FILES=(
 .gemrc
 )
 
+# TODO
+# .vimのaliasを作成
+# git submodule init, git submodule updateを実行する(neobundle)
+
 for file in ${DOT_FILES[@]}
 do
       ln -s $HOME/dotfiles/$file $HOME/$file
