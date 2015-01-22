@@ -22,10 +22,11 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/vimproc.vim'
 NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'ctrlpvim/ctrlp.vim'
+NeoBundle 'ctrlpvim/ctrlp.vim' " sublime textのgoto anythingのような機能
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'tpope/vim-surround'
- 
+NeoBundle 'ConradIrwin/vim-bracketed-paste' " set pasteを自動化する
+
 call neobundle#end()
  
 " 未インストールのプラグインがある場合、インストールするかどうかを尋ねてくれるようにする設定
