@@ -1,0 +1,65 @@
+#!/bin/bash
+
+function usage() {
+cat <<EOT
+usage:  pomo [command]
+- command
+  - start
+  - stop
+  - 245cloud
+
+install:
+  chmod +x pomo && cp -v pomo /usr/local/bin
+
+EOT
+exit 1
+}
+
+function stop() {
+  if [ -f /tmp/pomo.pid ]; then
+    POMO_PID=`cat /tmp/pomo.pid`
+    rm -f /tmp/pomo.pid
+    kill $POMO_PID
+  fi
+}
+
+function pomo() {
+  if [ $2 = pomo ]; then
+    c=1440 # 24min
+  else
+    c=300 # 5min
+  fi
+
+  while `sleep 1`; do
+    c=`expr $c - 1`
+    printf "\033];$1$2:%02d:%02d\007" `expr $c / 60` `expr $c % 60`
+    if [ $c = 0 ]; then
+      break
+    fi
+  done
+
+  echo -n $'\a'
+
+  if [ $2 = pomo ]; then
+    pomo $1 break
+  else
+    pomo `expr $1 + 1` pomo
+  fi
+}
+
+function start() {
+  stop
+  pomo 1 pomo &
+  echo "$!" > /tmp/pomo.pid
+}
+
+function 245cloud() {
+  open http://245cloud.com/
+}
+
+case ${1:-start} in
+  start) start ;;
+  stop) stop ;;
+  245cloud|245|cloud) 245cloud ;;
+  *) usage ;;
+esac
