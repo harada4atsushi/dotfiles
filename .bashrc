@@ -6,7 +6,6 @@ source ~/dotfiles/bin/git-prompt.sh
 GIT_PS1_SHOWDIRTYSTATE=true
 PS1='[\u@\h \W]$(__git_ps1 "[\[\033[32m\]%s\[\033[0m\]]")\$ '
 
-eval "$(direnv hook bash)"
 
 alias ssh=~/bin/ssh_chbg.sh
 
@@ -20,4 +19,9 @@ if type brew > /dev/null 2>&1; then
     . `brew --prefix`/etc/bash_completion
 
   fi
+fi
+
+# direnvが存在する場合
+if type direnv > /dev/null 2>&1; then
+  eval "$(direnv hook bash)"
 fi
