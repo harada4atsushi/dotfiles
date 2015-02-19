@@ -1,7 +1,8 @@
 PROMPT_COMMAND='echo -ne "\033]0;\007"'
 
-source ~/.git/git-completion.bash
-source ~/.git/git-prompt.sh
+source ~/dotfiles/bin/git-completion
+source ~/dotfiles/bin/git-prompt
+
 GIT_PS1_SHOWDIRTYSTATE=true
 PS1='[\u@\h \W]$(__git_ps1 "[\[\033[32m\]%s\[\033[0m\]]")\$ '
 
