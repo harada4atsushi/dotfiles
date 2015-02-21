@@ -16,9 +16,12 @@ call neobundle#begin(expand('~/.vim/bundle/'))
  
 " neobundle自体をneobundleで管理
 NeoBundleFetch 'Shougo/neobundle.vim'
- 
+
+if v:version > 703
+  NeoBundle 'Shougo/unite.vim'
+endif
+
 NeoBundle 'slim-template/vim-slim'
-NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/vimproc.vim'
 NeoBundle 'scrooloose/nerdtree'

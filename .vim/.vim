@@ -1,0 +1,1 @@
+/home/a.harada/dotfiles/.vim
