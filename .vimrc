@@ -89,5 +89,14 @@ let g:ctrlp_prompt_mappings = {
   \ 'PrtSelectMove("k")':   ['<c-p>']
   \ }
 
+" 行を強調表示
+set cursorline
+
+" 列を強調表示
+"set cursorcolumn
+
+" 括弧のハイライトがみづらいのを調整
+hi MatchParen ctermbg=1
+
 syntax on
 filetype plugin indent on

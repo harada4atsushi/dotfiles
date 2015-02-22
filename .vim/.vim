@@ -1,0 +1,1 @@
+/Users/haradaatsushi/dotfiles/.vim
