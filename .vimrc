@@ -53,6 +53,9 @@ set whichwrap=b,s,h,l,<,>,[,]
 " pasteモードトグル(ペースト時のautoindent対策)
 set pastetoggle=<C-E>
 
+" 検索時に大文字小文字を区別しない
+set ic
+
 " ,rb入力でruby整形
 map ,rb <Esc>:%! ~/rbeautify.rb - <CR>
 
