@@ -14,3 +14,5 @@ export PATH="$HOME/.rbenv/shims:$PATH"
 
 export DOCKER_HOST=tcp://192.168.59.103:2376
 export DOCKER_CERT_PATH=/Users/haradaatsushi/.docker/boot2docker-vm
+
+eval "$(hub alias -s)"

@@ -1,11 +1,11 @@
 {
-	"color_scheme": "Packages/Color Scheme - Default/Blackboard.tmTheme",
+	"color_scheme": "Packages/User/SublimeLinter/Blackboard (SL).tmTheme",
 	"detect_slow_plugins": false,
 	"font_size": 12,
 	"ignored_packages":
 	[
-		"Vintage",
-		"Ruby Slim"
+		"Ruby Slim",
+		"Vintage"
 	],
 	"open_files_in_new_window": false,
 	"trim_trailing_white_space_on_save": true
