@@ -70,5 +70,23 @@
         <autogen>__KeyToKey__ KeyCode::K, ModifierFlag::FN, KeyCode::CURSOR_UP</autogen>
         <autogen>__KeyToKey__ KeyCode::L, ModifierFlag::FN, KeyCode::CURSOR_RIGHT</autogen>
       </item>
-   </list>
+      <item>
+        <name>EISUU + HJKL -> Left,Down,Up,Right</name>
+        <identifier>remap.eisuu_hjkl_to_cursor</identifier>
+        <autogen>__KeyOverlaidModifier__ KeyCode::JIS_EISUU, KeyCode::VK_MODIFIER_EXTRA1, KeyCode::JIS_EISUU</autogen>
+        <autogen>__KeyToKey__ KeyCode::H, ModifierFlag::EXTRA1,KeyCode::CURSOR_LEFT</autogen>
+        <autogen>__KeyToKey__ KeyCode::J, ModifierFlag::EXTRA1,KeyCode::CURSOR_DOWN</autogen>
+        <autogen>__KeyToKey__ KeyCode::K, ModifierFlag::EXTRA1,KeyCode::CURSOR_UP</autogen>
+        <autogen>__KeyToKey__ KeyCode::L, ModifierFlag::EXTRA1,KeyCode::CURSOR_RIGHT</autogen>
+      </item>
+      <!-- カーソルキーの無効化 -->
+      <item>
+        <name>disable cursor key</name>
+        <identifier>remap.disable_cursor</identifier>
+        <autogen>--KeyToKey-- KeyCode::CURSOR_LEFT, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::CURSOR_RIGHT, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::CURSOR_UP, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::CURSOR_DOWN, KeyCode::VK_NONE</autogen>
+      </item>
+  </list>
 </root>
