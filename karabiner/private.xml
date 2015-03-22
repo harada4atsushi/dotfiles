@@ -2,18 +2,11 @@
 <root>
   <list>
     <item>
-        <name>ime off spotlight</name>
-        <identifier>private.ime_of_spotlight</identifier>
-        <autogen>
-          --KeyToKey--
-          KeyCode::SPACE, ModifierFlag::CONTROL_L,
-          KeyCode::SPACE, ModifierFlag::CONTROL_L, KeyCode::JIS_EISUU
-        </autogen>
-    </item>
-    <item>
-      <name>terminal</name>
-      <identifier>private.app_terminal</identifier>
+      <name>LeaveInsMode with EISUU(Terminal)</name>
+      <identifier>private.app_terminal_esc_with_eisuu</identifier>
       <only>TERMINAL</only>
+      <autogen>--KeyToKey-- KeyCode::ESCAPE, KeyCode::ESCAPE, KeyCode::JIS_EISUU</autogen>
+      <autogen>--KeyToKey-- KeyCode::C, VK_CONTROL, KeyCode::C, VK_CONTROL, KeyCode::JIS_EISUU</autogen>
       <!-- タブの切替 -->
       <autogen>
         --KeyToKey--
@@ -27,42 +20,73 @@
       </autogen>
     </item>
     <item>
-      <name>Excel F2</name>
-      <identifier>private.app_excel_f2</identifier>
-      <only>EXCEL</only>
-      <!-- セルの編集 F2 -->
-      <autogen>--KeyToKey-- KeyCode::F2, KeyCode::U, ModifierFlag::CONTROL_L</autogen>
+        <name>Excel F2</name>
+        <identifier>private.app_excel_f2</identifier>
+        <only>EXCEL</only>
+        <autogen>--KeyToKey-- KeyCode::F2, KeyCode::U, ModifierFlag::CONTROL_L</autogen>
+        <!-- シートの切替 -->
+        <autogen>
+            --KeyToKey--
+            KeyCode::CURSOR_RIGHT, ModifierFlag::COMMAND_L | ModifierFlag::OPTION_L,
+            KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_L
+        </autogen>
+        <autogen>
+            --KeyToKey--
+            KeyCode::CURSOR_LEFT, ModifierFlag::COMMAND_L | ModifierFlag::OPTION_L,
+            KeyCode::CURSOR_LEFT, ModifierFlag::OPTION_L
+        </autogen>
     </item>
-    
+	<item>
+        <name>ime off spotlight</name>
+        <identifier>private.ime_of_spotlight</identifier>
+        <autogen>
+          --KeyToKey--
+          KeyCode::SPACE, ModifierFlag::CONTROL_L,
+          KeyCode::SPACE, ModifierFlag::CONTROL_L, KeyCode::JIS_EISUU
+        </autogen>
+    </item>
     <item>
-        <name>move tab</name>
-        <only>GOOGLE_CHROME</only>
+       <name>move tab</name>
+       <only>GOOGLE_CHROME</only>
         <identifier>private.move_tab</identifier>
         <autogen>
-            --KeyToKey--
-            KeyCode::J, ModifierFlag::CONTROL_L | ModifierFlag::SHIFT_L,
-            KeyCode::CURSOR_LEFT, ModifierFlag::COMMAND_L | ModifierFlag::OPTION_L
+        	--KeyToKey--
+          KeyCode::J, ModifierFlag::CONTROL_L | ModifierFlag::SHIFT_L,
+	        KeyCode::CURSOR_LEFT, ModifierFlag::COMMAND_L | ModifierFlag::OPTION_L
         </autogen>
         <autogen>
-            --KeyToKey--
-            KeyCode::K, ModifierFlag::CONTROL_L | ModifierFlag::SHIFT_L,
-            KeyCode::CURSOR_RIGHT, ModifierFlag::COMMAND_L | ModifierFlag::OPTION_L
+        	--KeyToKey--
+          KeyCode::K, ModifierFlag::CONTROL_L | ModifierFlag::SHIFT_L,
+	        KeyCode::CURSOR_RIGHT, ModifierFlag::COMMAND_L | ModifierFlag::OPTION_L
         </autogen>
-    </item>
-    <item>
-        <name>finder cursol up/down</name>
-        <only>FINDER</only>
-        <identifier>private.finder_up_down</identifier>
-        <autogen>
-            --KeyToKey--
-            KeyCode::P, ModifierFlag::CONTROL_L,
-            KeyCode::CURSOR_UP
-        </autogen>
-        <autogen>
-            --KeyToKey--
-            KeyCode::N, ModifierFlag::CONTROL_L,
-            KeyCode::CURSOR_DOWN
-        </autogen>
-    </item>
+      </item>
+      <!-- vimキーバインドのカーソル移動 -->
+      <item>
+        <name>CAPSLOCK + HJKL -> Left,Down,Up,Right</name>
+        <identifier>remap.capslock_hjkl_to_cursor</identifier>
+        <autogen>__KeyToKey__ KeyCode::F19, KeyCode::FN</autogen>
+        <autogen>__KeyToKey__ KeyCode::H, ModifierFlag::FN, KeyCode::CURSOR_LEFT</autogen>
+        <autogen>__KeyToKey__ KeyCode::J, ModifierFlag::FN, KeyCode::CURSOR_DOWN</autogen>
+        <autogen>__KeyToKey__ KeyCode::K, ModifierFlag::FN, KeyCode::CURSOR_UP</autogen>
+        <autogen>__KeyToKey__ KeyCode::L, ModifierFlag::FN, KeyCode::CURSOR_RIGHT</autogen>
+      </item>
+      <item>
+        <name>EISUU + HJKL -> Left,Down,Up,Right</name>
+        <identifier>remap.eisuu_hjkl_to_cursor</identifier>
+        <autogen>__KeyOverlaidModifier__ KeyCode::JIS_EISUU, KeyCode::VK_MODIFIER_EXTRA1, KeyCode::JIS_EISUU</autogen>
+        <autogen>__KeyToKey__ KeyCode::H, ModifierFlag::EXTRA1,KeyCode::CURSOR_LEFT</autogen>
+        <autogen>__KeyToKey__ KeyCode::J, ModifierFlag::EXTRA1,KeyCode::CURSOR_DOWN</autogen>
+        <autogen>__KeyToKey__ KeyCode::K, ModifierFlag::EXTRA1,KeyCode::CURSOR_UP</autogen>
+        <autogen>__KeyToKey__ KeyCode::L, ModifierFlag::EXTRA1,KeyCode::CURSOR_RIGHT</autogen>
+      </item>
+      <!-- カーソルキーの無効化 -->
+      <item>
+        <name>disable cursor key</name>
+        <identifier>remap.disable_cursor</identifier>
+        <autogen>--KeyToKey-- KeyCode::CURSOR_LEFT, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::CURSOR_RIGHT, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::CURSOR_UP, KeyCode::VK_NONE</autogen>
+        <autogen>--KeyToKey-- KeyCode::CURSOR_DOWN, KeyCode::VK_NONE</autogen>
+      </item>
   </list>
 </root>

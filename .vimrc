@@ -87,6 +87,15 @@ hi DiffChange ctermfg=black ctermbg=3
 hi DiffDelete ctermfg=black ctermbg=6
 hi DiffText   ctermfg=black ctermbg=7
 
+" カーソルキーを無効化
+inoremap <Right> <Nop>
+inoremap <Up> <Nop>
+inoremap <Down> <Nop>
+nnoremap <Right> <Nop>
+nnoremap <Left> <Nop>
+nnoremap <Up> <Nop>
+nnoremap <Down> <Nop>
+
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_prompt_mappings = {
   \ 'PrtHistory(-1)':       ['<nop>'],
