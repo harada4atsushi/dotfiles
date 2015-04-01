@@ -4,8 +4,10 @@
 	"font_size": 12,
 	"ignored_packages":
 	[
-		"Ruby Slim",
-		"Vintage"
+		"Vintage",
+		"SublimeLinter",
+		"Sublimerge Pro",
+		"Ruby Slim"
 	],
 	"open_files_in_new_window": false,
 	"trim_trailing_white_space_on_save": true

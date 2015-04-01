@@ -1,0 +1,5 @@
+'body':
+  'cmd-k l': 'pane:split-right'
+  'cmd-k h': 'pane:split-left'
+  'cmd-k j': 'pane:split-down'
+  'cmd-k k': 'pane:split-lef'
