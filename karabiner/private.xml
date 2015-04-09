@@ -56,7 +56,7 @@
         </autogen>
         <autogen>
         	--KeyToKey--
-          KeyCode::K, ModifierFlag::CONTROL_L | ModifierFlag::SHIFT_L,
+               KeyCode::K, ModifierFlag::CONTROL_L | ModifierFlag::SHIFT_L,
 	        KeyCode::CURSOR_RIGHT, ModifierFlag::COMMAND_L | ModifierFlag::OPTION_L
         </autogen>
       </item>
@@ -87,6 +87,16 @@
         <autogen>--KeyToKey-- KeyCode::CURSOR_RIGHT, KeyCode::VK_NONE</autogen>
         <autogen>--KeyToKey-- KeyCode::CURSOR_UP, KeyCode::VK_NONE</autogen>
         <autogen>--KeyToKey-- KeyCode::CURSOR_DOWN, KeyCode::VK_NONE</autogen>
+      </item>
+      <!-- finder上での移動 control + hjkl -->
+      <item>
+        <name>finder control + hjkl -> Left,Down,Up,Right</name>
+        <identifier>remap.control_hjkl_finder</identifier>
+        <only>FINDER</only>
+        <autogen>__KeyToKey__ KeyCode::N | ModifierFlag::CONTROL_L, KeyCode::CURSOR_DOWN</autogen>
+        <autogen>__KeyToKey__ KeyCode::P | ModifierFlag::CONTROL_L, KeyCode::CURSOR_UP</autogen>
+        <autogen>__KeyToKey__ KeyCode::F | ModifierFlag::CONTROL_L, KeyCode::CURSOR_DOWN | ModifierFlag::COMMAND_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::B | ModifierFlag::CONTROL_L, KeyCode::CURSOR_UP | ModifierFlag::COMMAND_L</autogen>
       </item>
   </list>
 </root>
