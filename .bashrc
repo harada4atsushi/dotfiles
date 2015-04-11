@@ -26,3 +26,12 @@ fi
 if type direnv > /dev/null 2>&1; then
   eval "$(direnv hook bash)"
 fi
+
+# tmuxセッションがなければtmuxを起動する
+if [ -z $TMUX ]; then
+  if $(tmux has-session); then
+    tmux attach
+  else
+    tmux
+  fi
+fi

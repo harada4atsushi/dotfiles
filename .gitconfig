@@ -32,3 +32,7 @@
     #external = ~/dotfiles/bin/git_diff_wrapper
 [pager]
     diff =
+[filter "lfs"]
+	clean = git lfs clean %f
+	smudge = git lfs smudge %f
+	required = true
