@@ -21,3 +21,4 @@ brew 'boot2docker'
 brew 'imagemagick'
 
 cask 'google-chrome'
+cask 'hyperswitch'
