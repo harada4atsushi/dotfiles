@@ -22,3 +22,5 @@ brew 'imagemagick'
 
 cask 'google-chrome'
 cask 'hyperswitch'
+cask 'dropbox'
+cask 'evernote'
