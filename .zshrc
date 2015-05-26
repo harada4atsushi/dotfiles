@@ -102,3 +102,12 @@ alias sudo='sudo '
 # グローバルエイリアス
 alias -g L='| less'
 alias -g G='| grep'
+
+########################################
+# zsh起動時にtmuxを自動起動
+[[ -z "$TMUX" && ! -z "$PS1" ]] && tmux
+
+# rbenv
+export PATH=$HOME/.rbenv/bin:$PATH
+eval "$(rbenv init - zsh)"
+export CC=/usr/bin/gcc
