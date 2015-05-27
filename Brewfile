@@ -19,6 +19,7 @@ brew 'redis'
 brew 'docker' 
 brew 'boot2docker'  
 brew 'imagemagick'
+brew 'reattach-to-user-namespace'
 
 cask 'google-chrome'
 cask 'hyperswitch'

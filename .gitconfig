@@ -1,6 +1,6 @@
 [user]
-	name = a.harada
-	email = redhornet96@gmail.com 
+  name = a.harada
+  email = redhornet96@gmail.com 
 [color]
   status = auto
   diff = auto
@@ -8,25 +8,25 @@
   interactive = auto
   grep = auto
 [core]
-	excludesfile = ~/.gitignore
-	quotepath = false
-	precomposeunicode = true
-	precomposenicode = true
-	editor = /usr/bin/vim
+  excludesfile = ~/.gitignore
+  quotepath = false
+  precomposeunicode = true
+  precomposenicode = true
+  editor = /usr/bin/vim
 [merge]
   keepBackup = false;
-	tool = sublime
+  tool = sublime
 [mergetool "sublime"]
-	cmd = subl -w $MERGED
-	trustExitCode = false
+  cmd = subl -w $MERGED
+  trustExitCode = false
 [credential]
 	helper = osxkeychain
 [alias]
-	graph = log --graph --decorate --oneline
+  graph = log --graph --decorate --oneline
   st = status
-	c = commit -v
-	puu = push -u
-	co = checkout
+  c = commit -v
+  puu = push -u
+  co = checkout
   cop = !git checkout `git branch -a | peco --prompt "GIT_BRANCH\\>" | head -n 1`
 [diff]
     #external = ~/dotfiles/bin/git_diff_wrapper

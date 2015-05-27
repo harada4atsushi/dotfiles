@@ -9,10 +9,11 @@ colors
 
 # プロンプト
 # 1行表示
-# PROMPT="%~ %# "
+#PROMPT="%n@%~ %# "
+PROMPT="%~ $ "
 # 2行表示
-PROMPT="%{${fg[green]}%}[%n@%m]%{${reset_color}%} %~
-%# "
+# PROMPT="%{${fg[green]}%}[%n@%m]%{${reset_color}%} %~
+#%# "
 
 ########################################
 # 補完
@@ -103,6 +104,21 @@ alias sudo='sudo '
 alias -g L='| less'
 alias -g G='| grep'
 
+
+########################################
+# プロンプトにgitブランチを表示する
+########################################
+autoload -Uz vcs_info
+zstyle ':vcs_info:*' formats '(%s)-[%b]'
+zstyle ':vcs_info:*' actionformats '(%s)-[%b|%a]'
+precmd () {
+    psvar=()
+    LANG=en_US.UTF-8 vcs_info
+    [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
+}
+RPROMPT="%1(v|%F{green}%1v%f|)"
+
+
 ########################################
 # zsh起動時にtmuxを自動起動
 [[ -z "$TMUX" && ! -z "$PS1" ]] && tmux
@@ -111,3 +127,10 @@ alias -g G='| grep'
 export PATH=$HOME/.rbenv/bin:$PATH
 eval "$(rbenv init - zsh)"
 export CC=/usr/bin/gcc
+
+# aliasを読み込む
+if [ -f ~/.alias ] ; then
+. ~/.alias
+fi
+
+
