@@ -28,6 +28,7 @@
   puu = push -u
   co = checkout
   cop = !git checkout `git branch -a | peco --prompt "GIT_BRANCH\\>" | head -n 1`
+  pr = pull-request
 [diff]
     #external = ~/dotfiles/bin/git_diff_wrapper
 [pager]
