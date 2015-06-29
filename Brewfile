@@ -31,9 +31,11 @@ cask 'iterm2'
 cask 'slack'
 cask 'appcleaner'
 cask 'thunderbird'
-cask 'divvy'
 cask 'atom'
 cask 'skype'
 cask 'virtualbox'
 cask 'vagrant'
 cask 'google-japanese-ime'
+
+# bought apple store
+#cask 'divvy' 
