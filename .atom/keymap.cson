@@ -5,8 +5,8 @@
   'cmd-k k': 'pane:split-up'
   'cmd-shift-k l': 'window:focus-pane-on-right'
   'cmd-shift-k h': 'window:focus-pane-on-left'
-  'cmd-shift-k j': 'window:focus-pane-on-above'
-  'cmd-shift-k k': 'window:focus-pane-on-below'
+  'cmd-shift-k j': 'window:focus-pane-below'
+  'cmd-shift-k k': 'window:focus-pane-above'
 
 '.platform-darwin atom-text-editor':
   'f3': 'atom-ctags:go-to-declaration'
