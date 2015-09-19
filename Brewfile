@@ -39,6 +39,7 @@ cask 'google-japanese-ime'
 cask 'karabiner'
 cask 'arduino'
 cask 'kobito'
+cask 'google-drive'
 
 # bought apple store
 #cask 'divvy' 
