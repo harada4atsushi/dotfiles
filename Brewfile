@@ -40,6 +40,9 @@ cask 'virtualbox'
 cask 'vagrant'
 cask 'google-japanese-ime'
 cask 'licecap'
+cask 'karabiner'
+cask 'arduino'
+cask 'kobito'
 
 # bought apple store
 #cask 'divvy' 
