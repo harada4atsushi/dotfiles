@@ -1,3 +1,5 @@
+tap 'sanemat/font'
+
 brew 'brew-cask'
 brew 'tree'
 brew 'ctags' 
@@ -22,6 +24,7 @@ brew 'imagemagick'
 brew 'reattach-to-user-namespace'
 brew 'hub'
 brew 'ansible'
+brew 'ricty'
 
 cask 'google-chrome'
 cask 'hyperswitch'
@@ -36,6 +39,7 @@ cask 'skype'
 cask 'virtualbox'
 cask 'vagrant'
 cask 'google-japanese-ime'
+cask 'licecap'
 
 # bought apple store
 #cask 'divvy' 
