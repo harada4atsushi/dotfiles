@@ -44,6 +44,7 @@ cask 'karabiner'
 cask 'arduino'
 cask 'kobito'
 cask 'google-drive'
+cask 'firefox'
 
 # bought apple store
 #cask 'divvy' 
