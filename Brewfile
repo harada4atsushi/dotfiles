@@ -27,7 +27,6 @@ brew 'ansible'
 brew 'ricty'
 
 cask 'google-chrome'
-cask 'hyperswitch'
 cask 'dropbox'
 cask 'evernote'
 cask 'iterm2'
@@ -45,6 +44,10 @@ cask 'arduino'
 cask 'kobito'
 cask 'google-drive'
 cask 'firefox'
+cask 'todoist'
 
 # bought apple store
 #cask 'divvy' 
+
+# manual install
+#cask 'hyperswitch'
