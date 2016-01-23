@@ -1,19 +1,31 @@
 #!/bin/bash
-# while getopts mes: OPTION
-# do
-#   case $OPTION in
-#     m ) OPTION_m="TRUE" ;;
-#     #e ) OPTION_e="TRUE" ;;
-#     #s ) OPTION_s="TRUE" ; VALUE_s="$OPTARG" ;;
-#     * ) echo "Option Error" 1>&2
-#     #* ) echo "Usage: $COMMAND [-m | -e] [-s suffix] name ..." 1>&2
-#         exit 1 ;;
-#   esac
-# done
+# 特定ディレクトリ配下で、一定以上大きい容量のディレクトリ一覧を出力する
 
-#DIRECTORY=$1
+# usage
+cmdname=`basename $0`
+function usage() {
+  echo "Usage: ${cmdname} [-t threshold size(GB)] directory" 1>&2
+}
 
-# TODO: args directory point
-# TODO: args threshold size
-# TODO: show help
-sudo du -g -x -d 5 / | awk '$1 >= 5{print}'
+THRESHOLD_SIZE=5
+
+while getopts t: OPT
+do
+  case $OPT in
+    t ) THRESHOLD_SIZE=$OPTARG ;;
+    * ) usage
+        exit 1 ;;
+  esac
+done
+shift $((OPTIND - 1))
+
+# check arguments
+if [ $# -gt 1 ]; then
+  usage
+  exit 1
+fi
+
+DIRECTORY=$1
+DIRECTORY=${DIRECTORY:-.}
+
+sudo du -g -x -d $THRESHOLD_SIZE $DIRECTORY | awk '$1 >= 5{print}'
