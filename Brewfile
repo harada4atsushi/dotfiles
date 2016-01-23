@@ -51,3 +51,4 @@ cask 'todoist'
 
 # manual install
 #cask 'hyperswitch'
+#cask 'aquaterm'
