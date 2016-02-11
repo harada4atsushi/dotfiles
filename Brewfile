@@ -1,4 +1,5 @@
 tap 'sanemat/font'
+tap 'homebrew/science'
 
 brew 'brew-cask'
 brew 'tree'
