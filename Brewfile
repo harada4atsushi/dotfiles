@@ -46,6 +46,7 @@ cask 'kobito'
 cask 'google-drive'
 cask 'firefox'
 cask 'todoist'
+cask 'google-hangouts'
 
 # bought apple store
 #cask 'divvy' 
