@@ -4,7 +4,8 @@ source ~/dotfiles/bin/git-completion.bash
 source ~/dotfiles/bin/git-prompt.sh
 
 GIT_PS1_SHOWDIRTYSTATE=true
-PS1='[\u@\h \W]$(__git_ps1 "[\[\033[32m\]%s\[\033[0m\]]")\$ '
+PS1='[\u@\h \W] \360\237\215\243  $(__git_ps1 "[\[\033[32m\]%s\[\033[0m\]]")'
+#PS1='[\u@\h \W] $(__git_ps1 "[\[\033[32m\]%s\[\033[0m\]]")\$ '
 
 export PGDATA=/usr/local/var/postgres
 
