@@ -49,6 +49,7 @@ cask 'google-drive'
 cask 'firefox'
 cask 'todoist'
 cask 'sqwiggle'
+cask 'google-hangouts'
 
 # bought apple store
 #cask 'divvy' 
