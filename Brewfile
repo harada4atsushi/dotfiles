@@ -26,6 +26,8 @@ brew 'reattach-to-user-namespace'
 brew 'hub'
 brew 'ansible'
 brew 'ricty'
+brew 'mecab'
+brew 'mecab-ipadic'
 
 cask 'google-chrome'
 cask 'dropbox'
@@ -46,6 +48,7 @@ cask 'kobito'
 cask 'google-drive'
 cask 'firefox'
 cask 'todoist'
+cask 'sqwiggle'
 cask 'google-hangouts'
 
 # bought apple store
