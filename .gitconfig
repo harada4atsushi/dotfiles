@@ -27,6 +27,7 @@
   c = commit -v
   puu = push -u
   co = checkout
+  fco = !sh -c 'git fetch && git checkout ${0}' 
   cop = !git checkout `git branch -a | peco --prompt "GIT_BRANCH\\>" | head -n 1`
   pr = pull-request
 [diff]
