@@ -1,0 +1,34 @@
+#!/bin/bash
+
+# usage
+cmdname=`basename $0`
+
+function usage() {
+  echo "Usage: ${cmdname} subcommand" 1>&2
+}
+
+function open_url() {
+  open 'https://github.com/imamura0825/step-sales/pulls'
+  open 'https://github.com/mofmof/sms-porter/pulls'
+  open 'https://github.com/mofmof/sms-control/pulls'
+  open 'https://github.com/SuperCrowds/rili-api/pulls'
+}
+
+if [ $# -ne 1 ]; then
+  usage
+  exit 1
+fi
+
+subcommand="$1"
+shift
+
+case $subcommand in
+    open)
+        open_url
+        ;;
+    *)
+        echo "default"
+        ;;
+esac
+
+exit 0

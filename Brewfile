@@ -50,6 +50,7 @@ cask 'firefox'
 cask 'todoist'
 cask 'sqwiggle'
 cask 'google-hangouts'
+cask 'sequel-pro'
 
 # bought apple store
 #cask 'divvy' 
