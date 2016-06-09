@@ -28,6 +28,7 @@ brew 'ansible'
 brew 'ricty'
 brew 'mecab'
 brew 'mecab-ipadic'
+brew 'pyenv-virtualenv'
 
 cask 'google-chrome'
 cask 'dropbox'
@@ -45,10 +46,8 @@ cask 'licecap'
 cask 'karabiner'
 cask 'arduino'
 cask 'kobito'
-cask 'google-drive'
 cask 'firefox'
 cask 'todoist'
-cask 'sqwiggle'
 cask 'google-hangouts'
 
 # bought apple store
