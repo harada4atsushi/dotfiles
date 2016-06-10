@@ -10,7 +10,7 @@ brew 'openssl'
 brew 'rbenv' 
 brew 'ruby-build'
 brew 'rbenv-gemset' 
-brew 'rbenv-gem-rehash' 
+#brew 'rbenv-gem-rehash'  # error 
 brew 'readline'
 brew 'awscli' 
 brew 'postgresql'
@@ -29,6 +29,7 @@ brew 'ricty'
 brew 'mecab'
 brew 'mecab-ipadic'
 brew 'pyenv-virtualenv'
+brew 'pyenv'
 
 cask 'google-chrome'
 cask 'dropbox'
@@ -49,6 +50,7 @@ cask 'kobito'
 cask 'firefox'
 cask 'todoist'
 cask 'google-hangouts'
+# cask 'sequel-pro'  # error
 
 # bought apple store
 #cask 'divvy' 
