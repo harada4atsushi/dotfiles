@@ -50,7 +50,7 @@ cask 'kobito'
 cask 'firefox'
 cask 'todoist'
 cask 'google-hangouts'
-# cask 'sequel-pro'  # error
+cask 'sequel-pro'
 
 # bought apple store
 #cask 'divvy' 

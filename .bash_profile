@@ -4,6 +4,7 @@ fi
 
 ANDROID_SDK=/Applications/eclipse/android
 export PATH=$PATH:$ANDROID_SDK/platform-tools:$ANDROID_SDK/tools
+export PATH=$PATH:~/bin
 #export STUDIO_JDK=/Library/Java/JavaVirtualMachines/jdk1.7.0_72.jdk/
 
 # ls command color
