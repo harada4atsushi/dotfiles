@@ -49,7 +49,7 @@ cask 'arduino'
 cask 'kobito'
 cask 'firefox'
 cask 'todoist'
-cask 'google-hangouts'
+cask 'dash'
 cask 'sequel-pro'
 
 # bought apple store
