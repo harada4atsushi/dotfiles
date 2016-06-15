@@ -17,6 +17,8 @@ export DOCKER_CERT_PATH=/Users/haradaatsushi/.docker/boot2docker-vm
 
 eval "$(hub alias -s)"
 
+# pyenv, virtualenv
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"

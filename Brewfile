@@ -28,6 +28,7 @@ brew 'ansible'
 brew 'ricty'
 brew 'mecab'
 brew 'mecab-ipadic'
+brew 'pyenv-virtualenv'
 brew 'pyenv'
 
 cask 'google-chrome'
@@ -46,11 +47,10 @@ cask 'licecap'
 cask 'karabiner'
 cask 'arduino'
 cask 'kobito'
-cask 'google-drive'
 cask 'firefox'
 cask 'todoist'
 cask 'dash'
-# cask 'sequel-pro'  # error
+cask 'sequel-pro'
 
 # bought apple store
 #cask 'divvy' 
