@@ -49,8 +49,7 @@ cask 'kobito'
 cask 'google-drive'
 cask 'firefox'
 cask 'todoist'
-cask 'sqwiggle'
-cask 'google-hangouts'
+cask 'dash'
 # cask 'sequel-pro'  # error
 
 # bought apple store

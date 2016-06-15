@@ -96,6 +96,7 @@ export CC=/usr/bin/gcc
 export PYENV_ROOT="${HOME}/.pyenv"
 export PATH=${PYENV_ROOT}/bin:$PATH
 eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 # aliasを読み込む
 if [ -f ~/.alias ] ; then
@@ -104,3 +105,8 @@ fi
 
 # 独自コマンド
 export PATH=~/bin:$PATH
+
+# git管理したくない環境変数を読みこみ
+if [ -f ~/.env ] ; then
+. ~/.env
+fi
