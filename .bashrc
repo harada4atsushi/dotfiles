@@ -9,7 +9,7 @@ PS1='[\u@\h \W] \360\237\215\243  $(__git_ps1 "[\[\033[32m\]%s\[\033[0m\]]")\$ '
 
 export PGDATA=/usr/local/var/postgres
 
-alias ssh=~/bin/ssh_chbg.sh
+#alias ssh=~/bin/ssh_chbg.sh
 
 if [ -f ~/.alias ] ; then
 . ~/.alias
