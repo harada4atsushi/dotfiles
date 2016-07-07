@@ -5,39 +5,41 @@ set number
 filetype off
 filetype plugin indent off
 
-"---------------------------
-" Start Neobundle Settings.
-"---------------------------
-" bundleで管理するディレクトリを指定
-set runtimepath+=~/.vim/bundle/neobundle.vim/
- 
-" Required:
-call neobundle#begin(expand('~/.vim/bundle/'))
- 
-" neobundle自体をneobundleで管理
-NeoBundleFetch 'Shougo/neobundle.vim'
+if isdirectory("/.vim/bundle/neobundle.vim") 
+  "---------------------------
+  " Start Neobundle Settings.
+  "---------------------------
+  " bundleで管理するディレクトリを指定
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
 
-if v:version > 703
-  NeoBundle 'Shougo/unite.vim'
+  " Required:
+  call neobundle#begin(expand('~/.vim/bundle/'))
+
+  " neobundle自体をneobundleで管理
+  NeoBundleFetch 'Shougo/neobundle.vim'
+
+  if v:version > 703
+    NeoBundle 'Shougo/unite.vim'
+  endif
+
+  NeoBundle 'slim-template/vim-slim'
+  NeoBundle 'Shougo/neomru.vim'
+  NeoBundle 'Shougo/vimproc.vim'
+  NeoBundle 'scrooloose/nerdtree'
+  NeoBundle 'ctrlpvim/ctrlp.vim' " sublime textのgoto anythingのような機能
+  NeoBundle 'tpope/vim-rails'
+  NeoBundle 'tpope/vim-surround'
+  NeoBundle 'ConradIrwin/vim-bracketed-paste' " set pasteを自動化する
+
+  call neobundle#end()
+ 
+  " 未インストールのプラグインがある場合、インストールするかどうかを尋ねてくれるようにする設定
+  " 毎回聞かれると邪魔な場合もあるので、この設定は任意です。
+  NeoBundleCheck
+  "-------------------------
+  " End Neobundle Settings.
+  "-------------------------
 endif
-
-NeoBundle 'slim-template/vim-slim'
-NeoBundle 'Shougo/neomru.vim'
-NeoBundle 'Shougo/vimproc.vim'
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'ctrlpvim/ctrlp.vim' " sublime textのgoto anythingのような機能
-NeoBundle 'tpope/vim-rails'
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'ConradIrwin/vim-bracketed-paste' " set pasteを自動化する
-
-call neobundle#end()
- 
-" 未インストールのプラグインがある場合、インストールするかどうかを尋ねてくれるようにする設定
-" 毎回聞かれると邪魔な場合もあるので、この設定は任意です。
-NeoBundleCheck
-"-------------------------
-" End Neobundle Settings.
-"-------------------------
 
 " タブ設定(タブを半角スペースx2に展開)
 set expandtab

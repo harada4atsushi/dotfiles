@@ -31,7 +31,6 @@ brew 'mecab-ipadic'
 brew 'pyenv-virtualenv'
 brew 'pyenv'
 
-cask 'google-chrome'
 cask 'dropbox'
 cask 'evernote'
 cask 'iterm2'
@@ -54,6 +53,9 @@ cask 'sequel-pro'
 
 # bought apple store
 #cask 'divvy' 
+
+# 1password verify error
+# cask 'google-chrome'
 
 # manual install
 #cask 'hyperswitch'
