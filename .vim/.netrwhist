@@ -1,7 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/Users/haradaatsushi/source/play_game/.git'
 let g:netrw_dirhist_2='/Users/haradaatsushi/.gem'
 let g:netrw_dirhist_3='/Users/haradaatsushi/source/android_studio_workspace/Hairlog/.idea'
 let g:netrw_dirhist_4='/Users/haradaatsushi/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/railties-4.2.1/lib/rails/generators/rails/controller/templates'
 let g:netrw_dirhist_5='/Users/haradaatsushi'
+let g:netrw_dirhist_6='/Users/haradaatsushi/.gem'
