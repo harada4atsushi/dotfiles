@@ -110,3 +110,8 @@ export PATH=~/bin:$PATH
 if [ -f ~/.env ] ; then
 . ~/.env
 fi
+
+# tmuxinator
+export EDITOR='vim'
+export SHELL='zsh'
+source ~/.tmuxinator/tmuxinator.zsh
