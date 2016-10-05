@@ -30,6 +30,7 @@ brew 'mecab'
 brew 'mecab-ipadic'
 brew 'pyenv-virtualenv'
 brew 'pyenv'
+brew 'phantomjs'  # for feature spec execution
 
 cask 'dropbox'
 cask 'evernote'
