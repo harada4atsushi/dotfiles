@@ -1,5 +1,6 @@
 alias tmn=tmn
 alias bi="bundle install"
+alias be="bundle exec"
 alias r="rails"
 alias sssh=sssh
 
