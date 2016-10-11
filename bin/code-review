@@ -9,6 +9,7 @@ function usage() {
 
 function open_url() {
   open 'https://github.com/nekikara/job_recommender/pulls'
+  open 'https://github.com/Kurupeku/OFFER_CHRONICLE/pulls'
   open 'https://github.com/imamura0825/step-sales/pulls'
   open 'https://github.com/mofmof/sms-porter/pulls'
   open 'https://github.com/mofmof/sms-control/pulls'
