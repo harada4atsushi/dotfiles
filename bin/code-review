@@ -19,6 +19,7 @@ function open_url() {
   open 'https://github.com/jinnotaishi/ayo/pulls'
   open 'https://github.com/mofmof/spacenet/pulls'
   open 'https://github.com/SuperCrowds/rili-api/pulls'
+  open 'https://github.com/mofmof/donusagi-bot/pulls'
 }
 
 if [ $# -ne 1 ]; then
