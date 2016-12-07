@@ -16,7 +16,6 @@ function open_url() {
   open 'https://github.com/mofmof/sms-control/pulls'
   open 'https://github.com/mofmof/browser/pulls'
   open 'https://github.com/mofmof/sms-dummy/pulls'
-  open 'https://github.com/jinnotaishi/ayo/pulls'
   open 'https://github.com/mofmof/spacenet/pulls'
   open 'https://github.com/SuperCrowds/rili-api/pulls'
   open 'https://github.com/mofmof/donusagi-bot/pulls'
