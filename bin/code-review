@@ -8,15 +8,10 @@ function usage() {
 }
 
 function open_url() {
-  open 'https://github.com/medfie/pred/pulls'
-  open 'https://github.com/imamura0825/step-sales/pulls'
-  open 'https://github.com/mofmof/sms-porter/pulls'
-  open 'https://github.com/mofmof/sms-control/pulls'
-  open 'https://github.com/mofmof/browser/pulls'
-  open 'https://github.com/mofmof/sms-dummy/pulls'
-  open 'https://github.com/mofmof/spacenet/pulls'
-  open 'https://github.com/SuperCrowds/rili-api/pulls'
-  open 'https://github.com/mofmof/donusagi-bot/pulls'
+  CODE_REVIEW_TARGETS_FILE=~/.code-review
+  while read url; do
+    open $url
+  done < $CODE_REVIEW_TARGETS_FILE
 }
 
 if [ $# -ne 1 ]; then
