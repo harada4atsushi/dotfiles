@@ -29,6 +29,8 @@ def configure(keymap):
         keymap_finder = keymap.defineWindowKeymap(app_name='com.apple.finder')
         keymap_finder['Ctrl-P'] = 'Up'
         keymap_finder['Ctrl-N'] = 'Down'
+        keymap_finder['Ctrl-F'] = 'Cmd-Down'
+        keymap_finder['Ctrl-B'] = 'Cmd-Up'
 
     ####################################################################################################
     ## Globalのキーマップ
