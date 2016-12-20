@@ -14,6 +14,16 @@ def configure(keymap):
         keymap_excel = keymap.defineWindowKeymap(app_name='com.microsoft.Excel')
         keymap_excel['F2'] = 'Ctrl-U'
 
+    ####################################################################################################
+    ## Globalのキーマップ
+    ####################################################################################################
+    # if 1:
+    # keymap_global = keymap.defineWindowKeymap()
+    # カーソルキーを無効にする(キーバインド矯正用)
+    keymap.replaceKey('Left', 'Fn')
+    keymap.replaceKey('Right', 'Fn')
+    keymap.replaceKey('Up', 'Fn')
+    keymap.replaceKey('Down', 'Fn')
 
 
     # # --------------------------------------------------------------------
