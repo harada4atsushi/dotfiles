@@ -15,15 +15,39 @@ def configure(keymap):
         keymap_excel['F2'] = 'Ctrl-U'
 
     ####################################################################################################
+    ## Thunderbird
+    ####################################################################################################
+    if 1:
+        keymap_thunderbird = keymap.defineWindowKeymap(app_name='org.mozilla.thunderbird')
+        keymap_thunderbird['Ctrl-P'] = 'Up'
+        keymap_thunderbird['Ctrl-N'] = 'Down'
+
+    ####################################################################################################
+    ## Finder
+    ####################################################################################################
+    if 1:
+        keymap_finder = keymap.defineWindowKeymap(app_name='com.apple.finder')
+        keymap_finder['Ctrl-P'] = 'Up'
+        keymap_finder['Ctrl-N'] = 'Down'
+
+    ####################################################################################################
     ## Globalのキーマップ
     ####################################################################################################
     # if 1:
-    # keymap_global = keymap.defineWindowKeymap()
+    keymap_global = keymap.defineWindowKeymap()
     # カーソルキーを無効にする(キーバインド矯正用)
-    keymap.replaceKey('Left', 'Fn')
-    keymap.replaceKey('Right', 'Fn')
-    keymap.replaceKey('Up', 'Fn')
-    keymap.replaceKey('Down', 'Fn')
+    keymap.replaceKey('Left', 'Cmd')
+    keymap.replaceKey('Right', 'Cmd')
+    keymap.replaceKey('Up', 'Cmd')
+    keymap.replaceKey('Down', 'Cmd')
+
+
+    # keymap.replaceKey('Ctrl-N', 'Down')
+    # keymap_global['Ctrl-N'] = 'Down'
+
+
+
+
 
 
     # # --------------------------------------------------------------------
