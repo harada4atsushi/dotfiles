@@ -1,4 +1,4 @@
-﻿import sys
+import sys
 import os
 import datetime
 import subprocess
@@ -7,6 +7,27 @@ from keyhac import *
 
 
 def configure(keymap):
+    ####################################################################################################
+    ## Globalのキーマップ
+    ####################################################################################################
+    # if 1:
+    keymap_global = keymap.defineWindowKeymap()
+    # カーソルキーを無効にする(キーバインド矯正用)
+    keymap.replaceKey('Left', 'Cmd')
+    keymap.replaceKey('Right', 'Cmd')
+    keymap.replaceKey('Up', 'Cmd')
+    keymap.replaceKey('Down', 'Cmd')
+
+
+    # keymap.replaceKey('Ctrl-N', 'Down')
+    # keymap_global['Ctrl-N'] = 'Down'
+
+    keymap_global['Ctrl-P'] = 'Up'
+    keymap_global['Ctrl-N'] = 'Down'
+    keymap_global['Ctrl-F'] = 'Right'
+    keymap_global['Ctrl-B'] = 'Left'
+
+
     ####################################################################################################
     ## Excel の場合、^Enter に F2（セル編集モード移行）を割り当てる（オプション）
     ####################################################################################################
@@ -32,20 +53,6 @@ def configure(keymap):
         keymap_finder['Ctrl-F'] = 'Cmd-Down'
         keymap_finder['Ctrl-B'] = 'Cmd-Up'
 
-    ####################################################################################################
-    ## Globalのキーマップ
-    ####################################################################################################
-    # if 1:
-    keymap_global = keymap.defineWindowKeymap()
-    # カーソルキーを無効にする(キーバインド矯正用)
-    keymap.replaceKey('Left', 'Cmd')
-    keymap.replaceKey('Right', 'Cmd')
-    keymap.replaceKey('Up', 'Cmd')
-    keymap.replaceKey('Down', 'Cmd')
-
-
-    # keymap.replaceKey('Ctrl-N', 'Down')
-    # keymap_global['Ctrl-N'] = 'Down'
 
 
 
