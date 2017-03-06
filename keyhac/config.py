@@ -2,6 +2,7 @@ import sys
 import os
 import datetime
 import subprocess
+import keyhac_hook
 
 from keyhac import *
 
@@ -13,11 +14,12 @@ def configure(keymap):
     # if 1:
     keymap_global = keymap.defineWindowKeymap()
 
-    # カーソルキーを無効にする(キーバインド矯正用)
-    keymap.replaceKey('Left', 'Cmd')
-    keymap.replaceKey('Right', 'Cmd')
-    keymap.replaceKey('Up', 'Cmd')
-    keymap.replaceKey('Down', 'Cmd')
+    # カーソルキーとdeleteを無効にする(キーバインド矯正用)
+    # keymap.replaceKey('Left', 'Cmd')
+    # keymap.replaceKey('Right', 'Cmd')
+    # keymap.replaceKey('Up', 'Cmd')
+    # keymap.replaceKey('Down', 'Cmd')
+    # keymap.replaceKey('Back', 'Cmd')
 
     # カーソルキーをEmacs likeに
     keymap_global['Ctrl-P'] = 'Up'
@@ -31,6 +33,7 @@ def configure(keymap):
     if 1:
         keymap_excel = keymap.defineWindowKeymap(app_name='com.microsoft.Excel')
         keymap_excel['F2'] = 'Ctrl-U'
+
 
     ####################################################################################################
     ## Thunderbird
