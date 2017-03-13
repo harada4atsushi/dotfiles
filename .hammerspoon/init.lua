@@ -43,7 +43,9 @@ remapKey({'ctrl'}, 'p', keyCode('up'))
 
 -- excelのみ有効なキー設定
 local excel = {
-  hs.hotkey.new({}, 'f2', keyCode('u', 'ctrl'))
+  hs.hotkey.new({}, 'f2', keyCode('u', 'ctrl')),
+  hs.hotkey.new({'cmd', 'shift'}, ']', keyCode('left', {'alt'})),  -- cmd + shift + [
+  hs.hotkey.new({'cmd', 'shift'}, '\\', keyCode('right', {'alt'}))  -- cmd + shift + ]
 }
 hs.window.filter.new('Microsoft Excel')
   :subscribe(hs.window.filter.windowFocused, function() enableHotkeys(excel) end)
