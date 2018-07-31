@@ -11,3 +11,10 @@
 '.platform-darwin atom-text-editor':
   'f3': 'atom-ctags:go-to-declaration'
   'shift-f3': 'atom-ctags:return-from-declaration'
+
+# workaround for emmet mapping of expand-abbreviation
+'.editor:not(.mini)':
+  'ctrl-e': 'editor:move-to-end-of-line'       # remap core binding
+  'alt-cmd-e' : 'emmet:expand-abbreviation'    # alternate binding for emmet
+'.platform-darwin atom-text-editor:not([mini])':
+  'ctrl-d': 'unset!'

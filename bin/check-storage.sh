@@ -9,18 +9,22 @@ function usage() {
 
 THRESHOLD_SIZE=5
 
-while getopts t: OPT
+while getopts t:h OPT
 do
   case $OPT in
-    t ) THRESHOLD_SIZE=$OPTARG ;;
-    * ) usage
+    t) THRESHOLD_SIZE=$OPTARG ;;
+    h) usage
         exit 1 ;;
+    *) usage
+        exit 1 ;;
+    :) echo  "[ERROR] Option argument is undefined.";;   #
+    \?) echo "[ERROR] Undefined options.";;
   esac
 done
 shift $((OPTIND - 1))
 
 # check arguments
-if [ $# -gt 1 ]; then
+if [ $# -eq 0 ]; then
   usage
   exit 1
 fi
@@ -28,4 +32,6 @@ fi
 DIRECTORY=$1
 DIRECTORY=${DIRECTORY:-.}
 
-sudo du -g -x -d $THRESHOLD_SIZE $DIRECTORY | awk '$1 >= 5{print}'
+# -d はdepth
+# sudo du -g -x -d 5 $DIRECTORY | awk -v t=$THRESHOLD_SIZE '$1 >= $t{print}'
+sudo du -g -x -d 5 $DIRECTORY | awk '$1 >= 5{print}'
