@@ -17,8 +17,9 @@ do
         exit 1 ;;
     *) usage
         exit 1 ;;
-    :) echo  "[ERROR] Option argument is undefined.";;   #
-    \?) echo "[ERROR] Undefined options.";;
+    # :) echo  "[ERROR] Option argument is undefined.";;   #
+    # \?) echo "[ERROR] Undefined options.";;
+    # :|\?) _usage;;      #(*3)
   esac
 done
 shift $((OPTIND - 1))
